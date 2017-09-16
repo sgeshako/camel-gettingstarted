@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<persistence-unit name="enhance" transaction-type="RESOURCE_LOCAL">
+		<class>camel.Person</class>
+		<properties>
+			<property name="openjpa.ConnectionDriverName" value="org.hsqldb.jdbcDriver" />
+			<property name="openjpa.ConnectionURL" value="jdbc:hsqldb:mem:person" />
+			<property name="openjpa.ConnectionUserName" value="sa" />
+			<property name="openjpa.ConnectionPassword" value="" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" />
+		</properties>
+	</persistence-unit>
+</persistence>
